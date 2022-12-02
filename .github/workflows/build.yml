@@ -1,0 +1,16 @@
+name: 👷‍♀️ App successfully builds
+
+on: [pull_request]
+
+jobs:
+  lint-css:
+    runs-on: ubuntu-latest
+    name: CRA builds
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - run: npm install
+      - run: npm run build
