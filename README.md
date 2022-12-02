@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# PSDS A11y Test App
+
+This repo/project serves the purpose of running a11y tests against our design-system APIs.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
