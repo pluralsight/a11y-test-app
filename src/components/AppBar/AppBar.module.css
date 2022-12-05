@@ -1,0 +1,17 @@
+.logo {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--ps-text);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--ps-action-navigation-hover);
+}
+
+.wrapper {
+  background-color: var(--ps-surface-medium);
+  position: sticky;
+}
