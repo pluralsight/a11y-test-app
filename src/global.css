@@ -1,0 +1,5 @@
+/* This file shouldn't exist - need to update base.css */
+
+html {
+  background-color: var(--ps-surface-weak);
+}

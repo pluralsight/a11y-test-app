@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+.iconWrapper {
+  display: block;
+  line-height: 0;
+  width: 100%;
+}
