@@ -1,5 +1,12 @@
 import { getGridProps, getGridItemProps } from '@pluralsight/headless-styles'
-import { BrowseIcon, ChannelIcon, HomeIcon, PathIcon } from '@pluralsight/icons'
+import {
+  BookmarkIcon,
+  BrowseIcon,
+  ChannelIcon,
+  HomeIcon,
+  PathIcon,
+  SkillIqIcon,
+} from '@pluralsight/icons'
 import { type PropsWithChildren } from 'react'
 import AppBarIcon from '../AppBarIcon'
 import Flex from '../Flex'
@@ -46,7 +53,7 @@ function Shortcuts() {
       <div {...getGridItemProps({ colSpan: 3 })}>
         <Flex align="center" justify="space-around">
           <Link>
-            <AppBarIcon icon={HomeIcon} label="Skill IQ" />
+            <AppBarIcon icon={SkillIqIcon} label="Skill IQ" />
           </Link>
           <Link>
             <AppBarIcon icon={BrowseIcon} label="Certifications" />
@@ -56,6 +63,9 @@ function Shortcuts() {
           </Link>
           <Link>
             <AppBarIcon icon={ChannelIcon} label="Channels" />
+          </Link>
+          <Link>
+            <AppBarIcon icon={BookmarkIcon} label="Bookmarks" />
           </Link>
         </Flex>
       </div>
