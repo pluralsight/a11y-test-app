@@ -9,7 +9,10 @@ import {
 } from '@pluralsight/icons'
 import { type PropsWithChildren } from 'react'
 import AppBarIcon from '../AppBarIcon'
+import AppSwitcher from '../AppSwitcher'
 import Flex from '../Flex'
+import Notifications from '../Notifications'
+import ProfileMenu from '../ProfileMenu'
 import SearchInput from '../SearchInput'
 import styles from './AppBar.module.css'
 
@@ -27,6 +30,7 @@ export default function AppBar() {
           <SearchInput />
         </span>
         <Shortcuts />
+        <Profile />
       </div>
     </header>
   )
@@ -70,6 +74,18 @@ function Shortcuts() {
         </Flex>
       </div>
     </>
+  )
+}
+
+function Profile() {
+  return (
+    <div {...oneColItem}>
+      <Flex align="center" justify="space-around">
+        <Notifications />
+        <AppSwitcher />
+        <ProfileMenu />
+      </Flex>
+    </div>
   )
 }
 
