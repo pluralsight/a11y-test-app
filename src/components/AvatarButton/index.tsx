@@ -17,6 +17,7 @@ function MatchAvatarContent(props: Omit<AvatarReturn, 'wrapper'>) {
 
 type AvatarImgProps = Pick<AvatarReturn['image'], keyof AvatarReturn['image']>
 function AvatarImg(props: AvatarImgProps) {
+  // eslint-disable-next-line jsx-a11y/alt-text
   return <img {...props} />
 }
 
