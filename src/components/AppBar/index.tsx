@@ -16,7 +16,7 @@ export default function AppBar() {
           Skills Logo
         </a>
         <HomeLinks />
-        <span {...getGridItemProps({ colSpan: 4 })}>
+        <span {...getGridItemProps({ colSpan: 6 })}>
           <SearchInput />
         </span>
         <Shortcuts />
@@ -28,7 +28,7 @@ export default function AppBar() {
 function HomeLinks() {
   return (
     <div {...oneColItem}>
-      <Flex align="center" justify="space-between">
+      <Flex align="center" justify="space-around">
         <Link>
           <AppBarIcon icon={HomeIcon} label="Home" />
         </Link>
@@ -43,18 +43,14 @@ function HomeLinks() {
 function Shortcuts() {
   return (
     <>
-      <div {...oneColItem}>
-        <Flex align="center" justify="space-between">
+      <div {...getGridItemProps({ colSpan: 3 })}>
+        <Flex align="center" justify="space-around">
           <Link>
             <AppBarIcon icon={HomeIcon} label="Skill IQ" />
           </Link>
           <Link>
             <AppBarIcon icon={BrowseIcon} label="Certifications" />
           </Link>
-        </Flex>
-      </div>
-      <div {...oneColItem}>
-        <Flex align="center" justify="space-between">
           <Link>
             <AppBarIcon icon={PathIcon} label="Paths" />
           </Link>
