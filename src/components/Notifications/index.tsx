@@ -59,7 +59,7 @@ export default function Notifications() {
       }}
     >
       {notificationData.notificationList.map((datum) => (
-        <Notification handleClose={handleClose} />
+        <Notification key={datum} handleClose={handleClose} />
       ))}
       <MenuItem divider={true} />
       <MenuItem href="/">View all notifications</MenuItem>
