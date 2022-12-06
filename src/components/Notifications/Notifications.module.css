@@ -1,0 +1,53 @@
+.notificationWrapper {
+  position: relative;
+}
+.notificationWrapperMenu {
+  right: 0;
+}
+
+.notificationList {
+  list-style: none;
+  max-height: 75vh;
+  overflow-y: auto;
+  margin-block-start: 0;
+}
+
+.notificationListItem {
+  padding-inline-start: 0;
+}
+
+.notificationListItem::before {
+  display: none;
+}
+
+.notification {
+  position: relative;
+}
+
+.notificationCloseButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notificationContent {
+  display: flex;
+  padding: 1rem 4rem 1rem 0;
+  font-size: 0.875rem;
+  color: var(--ps-text);
+  text-decoration: none;
+}
+
+.notificationBody {
+  white-space: normal;
+}
+
+.notificationIcon {
+  flex: 0 0 auto;
+  margin-inline-end: 1em;
+}
+
+.notificationTimestamp {
+  font-size: 0.75rem;
+  color: var(--ps-text-weak);
+}
