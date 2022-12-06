@@ -1,25 +1,3 @@
-.notificationWrapper {
-  position: relative;
-}
-.notificationWrapperMenu {
-  right: 0;
-}
-
-.notificationList {
-  list-style: none;
-  max-height: 75vh;
-  overflow-y: auto;
-  margin-block-start: 0;
-}
-
-.notificationListItem {
-  padding-inline-start: 0;
-}
-
-.notificationListItem::before {
-  display: none;
-}
-
 .notification {
   position: relative;
 }
