@@ -1,4 +1,10 @@
-import { memo, type PropsWithChildren } from 'react'
+import {
+  Children,
+  cloneElement,
+  memo,
+  type ReactElement,
+  type PropsWithChildren,
+} from 'react'
 import { getMenuItemProps } from '@pluralsight/headless-styles'
 import { useRovingTabIndex } from '@pluralsight/react-utils'
 
@@ -57,7 +63,14 @@ function MenuLink(props: MenuItemChildProps) {
   return (
     <li {...props.menuListItem}>
       <a href={props.href} {...props.menuItem} {...rovingTabIndexProps}>
-        {props.children}
+        {Children.map(props.children, (child) => {
+          const childEl = child as ReactElement
+          if (childEl?.type === 'span') {
+            return cloneElement(childEl, { ...props.menuItemText })
+          }
+
+          return child
+        })}
       </a>
     </li>
   )
