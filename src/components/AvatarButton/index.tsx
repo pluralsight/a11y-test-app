@@ -1,4 +1,11 @@
-import { type MouseEvent } from 'react'
+import {
+  forwardRef,
+  memo,
+  type FocusEvent,
+  type ForwardedRef,
+  type KeyboardEvent,
+  type MouseEvent,
+} from 'react'
 import { getAvatarProps, getIconProps } from '@pluralsight/headless-styles'
 import { PersonIcon } from '@pluralsight/icons'
 import { type AvatarOptions } from '@pluralsight/headless-styles/types'
@@ -29,9 +36,14 @@ function AvatarLabel(props: AvatarLabelProps) {
 
 interface AvatarButtonProps extends AvatarOptions {
   onClick?: (event: MouseEvent) => void | (() => void)
+  onKeyDown?: (event: KeyboardEvent) => void
+  onBlur?: (event: FocusEvent) => void
 }
 
-export default function AvatarButton(props: AvatarButtonProps) {
+function AvatarButton(
+  props: AvatarButtonProps,
+  ref: ForwardedRef<HTMLButtonElement>
+) {
   const { wrapper, ...avatarProps } = getAvatarProps({
     label: props.label || '',
     src: props.src || '',
@@ -40,10 +52,16 @@ export default function AvatarButton(props: AvatarButtonProps) {
   })
 
   return (
-    <>
-      <button {...wrapper} onClick={props.onClick}>
-        <MatchAvatarContent {...avatarProps} />
-      </button>
-    </>
+    <button
+      {...wrapper}
+      onClick={props.onClick}
+      onKeyDown={props.onKeyDown}
+      onBlur={props.onBlur}
+      ref={ref}
+    >
+      <MatchAvatarContent {...avatarProps} />
+    </button>
   )
 }
+
+export default memo(forwardRef(AvatarButton))
