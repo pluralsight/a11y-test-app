@@ -83,7 +83,7 @@ function Profile() {
       <Flex align="center" justify="space-around">
         <Notifications />
         <AppSwitcher />
-        <ProfileMenu />
+        <ProfileMenu name="User Name" />
       </Flex>
     </div>
   )
