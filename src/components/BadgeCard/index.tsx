@@ -31,8 +31,6 @@ function FeaturedBadge() {
     <a href="/" className={styles.badge}>
       <Flex align="center">
         <img
-          height="115"
-          width="115"
           src="https://source.unsplash.com/random/115x115/?hiking&q=80"
           alt="Weekly Goal 1x Badge"
           className={styles.badgeImage}
@@ -52,8 +50,6 @@ function Badge() {
   return (
     <a href="/" className={styles.badge}>
       <img
-        height="60"
-        width="60"
         src="https://source.unsplash.com/random/60x60/?space&q=80"
         alt="Stellar Explorer Badge"
         className={styles.badgeImage}

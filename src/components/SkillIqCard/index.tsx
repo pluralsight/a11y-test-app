@@ -26,8 +26,6 @@ export default function SkillIqCard() {
       <Skill
         icon={
           <img
-            width="50"
-            height="50"
             src="https://pluralsight2.imgix.net/paths/images/react-0f6558f88f.png"
             alt="React icon"
           />
@@ -38,8 +36,6 @@ export default function SkillIqCard() {
       <Skill
         icon={
           <img
-            width="50"
-            height="50"
             src="https://pluralsight2.imgix.net/paths/images/typescript-1169369a3e.png"
             alt="Typescript icon"
           />
@@ -50,8 +46,6 @@ export default function SkillIqCard() {
       <Skill
         icon={
           <img
-            width="50"
-            height="50"
             src="https://pluralsight.imgix.net/paths/path-icons/html5-7ac65c8ec0.png"
             alt="HTML5 icon"
           />
@@ -73,7 +67,7 @@ function Skill(props: SkillProps) {
   return (
     <div className={styles.skill}>
       <Flex align="center" justify="space-between">
-        {props.icon}
+        <span className={styles.skillIcon}>{props.icon}</span>
         <span className={styles.skillContent}>
           <strong className={styles.skillLabel} title={props.label}>
             {props.label}
