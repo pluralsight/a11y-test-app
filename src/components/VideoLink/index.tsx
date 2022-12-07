@@ -8,7 +8,7 @@ export default function VideoLink() {
       <Flex direction="column">
         <div className={styles.videoPreview}>
           <img
-            src="https://source.unsplash.com/random/?office&w=310&h=96&q=80"
+            src="https://source.unsplash.com/random/310x96/?office&q=80"
             alt="video placeholder"
             width="310"
             height="96"
