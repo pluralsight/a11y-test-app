@@ -10,8 +10,6 @@ export default function VideoLink() {
           <img
             src="https://source.unsplash.com/random/310x96/?office&q=80"
             alt="video placeholder"
-            width="310"
-            height="96"
           />
           <Progress
             kind="inset"

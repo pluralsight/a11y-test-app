@@ -5,4 +5,5 @@
 
 .videoPreview {
   margin-bottom: 0.5em;
+  max-width: 310px;
 }
