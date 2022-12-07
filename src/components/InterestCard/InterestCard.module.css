@@ -1,0 +1,7 @@
+.interestCloud {
+  margin-bottom: 1rem;
+}
+
+.interestCloud > * {
+  margin: 0.5rem;
+}
