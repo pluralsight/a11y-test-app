@@ -14,7 +14,7 @@ export default function SearchInput() {
     id: 'exampleIconInput',
     kind: 'icon',
     name: 'icon_input',
-    placeholder: 'Enter text',
+    placeholder: 'Search...',
     type: 'text',
     value,
   })
@@ -33,7 +33,11 @@ export default function SearchInput() {
       <span {...inputProps.iconWrapper} style={iconOverride}>
         <SearchIcon {...getIconProps(inputProps.iconOptions as any)} />
       </span>
-      <input {...inputProps.input} onChange={handleChange} />
+      <input
+        {...inputProps.input}
+        aria-label="Search"
+        onChange={handleChange}
+      />
     </div>
   )
 }
