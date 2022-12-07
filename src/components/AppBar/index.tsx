@@ -22,7 +22,7 @@ export default function AppBar() {
   return (
     <header className={styles.wrapper}>
       <div {...getGridProps({ cols: 12, gap: 8 })}>
-        <a className={styles.logo} href="/" {...oneColItem}>
+        <a href="/" {...oneColItem}>
           Skills Logo
         </a>
         <HomeLinks />
