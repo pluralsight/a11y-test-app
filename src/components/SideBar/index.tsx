@@ -1,5 +1,5 @@
 import { type PropsWithChildren } from 'react'
-import { getIconProps } from '@pluralsight/headless-styles'
+import { getGridItemProps, getIconProps } from '@pluralsight/headless-styles'
 import {
   AccountIcon,
   DashboardIcon,
@@ -20,10 +20,12 @@ const iconProps = getIconProps({
 
 export default function SideBar() {
   return (
-    <nav className={styles.sidebar}>
-      <LeaderTools />
-      <ContentTools />
-    </nav>
+    <div {...getGridItemProps({ colSpan: 2 })}>
+      <nav className={styles.sidebar}>
+        <LeaderTools />
+        <ContentTools />
+      </nav>
+    </div>
   )
 }
 

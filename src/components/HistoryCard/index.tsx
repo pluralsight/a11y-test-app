@@ -1,6 +1,6 @@
+import { getGridProps } from '@pluralsight/headless-styles'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
-import Flex from '../Flex'
 import VideoLink from '../VideoLink'
 
 export default function GetStartedCard() {
@@ -9,11 +9,11 @@ export default function GetStartedCard() {
       <CardHeader linkHref="/" linkText="View all" linkIconText="history">
         Get started
       </CardHeader>
-      <Flex justify="space-between">
+      <div {...getGridProps({ cols: 3, gap: 16 })}>
         <VideoLink />
         <VideoLink />
         <VideoLink />
-      </Flex>
+      </div>
     </Card>
   )
 }
