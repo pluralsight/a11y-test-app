@@ -1,0 +1,6 @@
+.card {
+  background-color: var(--ps-surface-medium);
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin: 1.5rem;
+}
