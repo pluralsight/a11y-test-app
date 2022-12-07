@@ -1,13 +1,18 @@
 import AppBar from '../components/AppBar'
 import SideBar from '../components/SideBar'
+import MainContent from '../components/MainContent'
+import AsideContent from '../components/AsideContent'
+import Flex from '../components/Flex'
 
 function App() {
   return (
     <div>
       <AppBar />
-      <div style={{ display: 'flex' }}>
+      <Flex>
         <SideBar />
-      </div>
+        <MainContent />
+        <AsideContent />
+      </Flex>
     </div>
   )
 }
