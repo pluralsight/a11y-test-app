@@ -4,7 +4,7 @@ import CardHeader from '../CardHeader'
 import Flex from '../Flex'
 import Progress from '../Progress'
 
-export default function WeeklyGoal() {
+export default function WeeklyGoalCard() {
   return (
     <Card>
       <Flex justify="space-between">
