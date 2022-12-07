@@ -1,0 +1,31 @@
+.badgeImage {
+  border-radius: 50%;
+}
+
+.featuredBadgeHeading {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.featuredBadgeText {
+  margin-left: 1rem;
+  text-align: start;
+}
+
+.badge {
+  border-radius: 6px;
+  color: var(--ps-text);
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.25s linear;
+}
+
+.badge:hover {
+  background-color: var(--ps-surface);
+}
+
+.badgeText {
+  margin-top: 1em;
+}
