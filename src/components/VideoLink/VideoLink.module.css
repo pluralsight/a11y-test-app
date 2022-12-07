@@ -1,0 +1,8 @@
+.videoLink {
+  color: var(--ps-text);
+  text-decoration: none;
+}
+
+.videoPreview {
+  margin-bottom: 0.5em;
+}
