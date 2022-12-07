@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode, useMemo } from 'react'
-import { getBadgeProps, getIconProps } from '@pluralsight/headless-styles'
+import { getBadgeProps } from '@pluralsight/headless-styles'
 import { type BadgeOptions } from '@pluralsight/headless-styles/types'
 
 interface BadgeProps extends PropsWithChildren, BadgeOptions {
@@ -23,6 +23,7 @@ export default function Badge(props: BadgeProps) {
     <span {...badge} style={{ display: 'inline-flex' }}>
       {Icon && (
         <span {...iconProps.iconWrapper}>
+          {/* Type issue with "Icon" */}
           {/* <Icon {...getIconProps(iconProps.iconOptions)} /> */}
         </span>
       )}
