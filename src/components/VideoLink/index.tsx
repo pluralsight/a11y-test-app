@@ -1,14 +1,8 @@
-import { getProgressProps } from '@pluralsight/headless-styles'
 import Flex from '../Flex'
+import Progress from '../Progress'
 import styles from './VideoLink.module.css'
 
 export default function VideoLink() {
-  const progressProps = getProgressProps({
-    kind: 'inset',
-    now: Math.round(Math.random() * 100),
-    size: 'xs',
-  })
-
   return (
     <a href="/" className={styles.videoLink}>
       <Flex direction="column">
@@ -19,9 +13,11 @@ export default function VideoLink() {
             width="310"
             height="96"
           />
-          <div {...progressProps.wrapper}>
-            <div {...progressProps.bar} />
-          </div>
+          <Progress
+            kind="inset"
+            now={Math.round(Math.random() * 100)}
+            size="xs"
+          />
         </div>
 
         <strong>Platforms Explained</strong>
