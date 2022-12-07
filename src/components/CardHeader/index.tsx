@@ -6,6 +6,7 @@ import TextLink from '../TextLink'
 import styles from './CardHeader.module.css'
 
 interface CardHeaderProps extends PropsWithChildren {
+  justify?: 'space-between'
   linkText?: string
   linkIconText?: string
   linkHref?: string
@@ -14,7 +15,7 @@ interface CardHeaderProps extends PropsWithChildren {
 export default function CardHeader(props: CardHeaderProps) {
   return (
     <header className={styles.header}>
-      <Flex align="center">
+      <Flex align="center" justify={props.justify}>
         <h2 className={styles.heading}>{props.children}</h2>
         {props.linkHref && (
           <TextLink href={props.linkHref}>
