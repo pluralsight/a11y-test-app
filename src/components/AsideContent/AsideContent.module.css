@@ -1,3 +1,7 @@
 .asideContent {
   padding-right: 1rem;
 }
+
+.asideContent > * {
+  margin-top: 1.5rem;
+}
