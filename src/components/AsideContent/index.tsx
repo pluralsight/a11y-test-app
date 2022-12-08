@@ -8,8 +8,9 @@ import WeeklyGoalCard from '../WeeklyGoalCard'
 import styles from './AsideContent.module.css'
 
 export default function AsideContent(props: PropsWithChildren) {
+  const gridItemProps = getGridItemProps({ colSpan: 3 })
   return (
-    <div {...getGridItemProps({ colSpan: 3 })}>
+    <div {...gridItemProps} style={{ ...gridItemProps.style, minWidth: 0 }}>
       <div className={styles.asideContent}>
         <RoleIqCard />
         <WeeklyGoalCard />
