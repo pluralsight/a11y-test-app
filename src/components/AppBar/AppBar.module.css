@@ -22,7 +22,7 @@
 }
 
 .wrapper {
-  background-color: var(--ps-surface-medium);
+  background-color: var(--ps-surface-weak);
   padding: 0 1rem;
   position: sticky;
   top: 0;
