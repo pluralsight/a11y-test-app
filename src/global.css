@@ -1,5 +1,10 @@
 /* This file shouldn't exist - need to update base.css */
 
 html {
-  background-color: var(--ps-surface-weak);
+  background-color: var(--ps-surface);
+}
+
+h1,
+h2 {
+  color: var(--ps-text-strong);
 }
