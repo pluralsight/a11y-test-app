@@ -9,8 +9,22 @@ interface FallbackProps {
 
 function Fallback(props: FallbackProps) {
   return (
-    <div {...getSkeletonProps()}>
-      <div style={{ width: props.width, height: props.height }} />
+    <div
+      aria-label="Image loading..."
+      {...getSkeletonProps()}
+      style={{
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        width: 'fit-content',
+      }}
+    >
+      <div
+        style={{
+          width: props.width,
+          height: props.height,
+          maxWidth: '100%',
+        }}
+      />
     </div>
   )
 }
@@ -24,7 +38,7 @@ interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 function Image(props: ImageProps) {
-  const { imgData, ...imgProps } = props
+  const { imgData, width, height, ...imgProps } = props
   const img = imgData.read()
   // eslint-disable-next-line jsx-a11y/alt-text
   return <img {...imgProps} {...img} />
