@@ -1,14 +1,19 @@
 .logo {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: var(--ps-text);
+  display: inline-block;
+  height: 100%;
   padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.logoHeading {
+  align-items: center;
+  color: var(--ps-text-strong);
+  display: inline-flex;
+  font-size: 1.5rem;
   height: 100%;
 }
 
-.logo *:first-child {
+.logo svg {
   margin-right: 0.5em;
 }
 
