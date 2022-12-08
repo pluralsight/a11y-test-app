@@ -1,8 +1,8 @@
 import { getButtonProps, getIconProps } from '@pluralsight/headless-styles'
 import { ChevronDownIcon } from '@pluralsight/icons'
-import Badge from '../Badge'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
+import Tag from '../Tag'
 import styles from './InterestCard.module.css'
 
 const moreButtonProps = getButtonProps({
@@ -20,12 +20,12 @@ export default function InterestCard() {
     <Card>
       <CardHeader>Your Interests</CardHeader>
       <div className={styles.interestCloud}>
-        <Badge sentiment="action">GitHub</Badge>
-        <Badge sentiment="action">JavaScript</Badge>
-        <Badge sentiment="action">Digital accessibility</Badge>
-        <Badge sentiment="action">SASS</Badge>
-        <Badge sentiment="action">Design system</Badge>
-        <Badge sentiment="action">React</Badge>
+        <Tag href="/">GitHub</Tag>
+        <Tag href="/">JavaScript</Tag>
+        <Tag href="/">Digital accessiTag</Tag>
+        <Tag href="/">SASS</Tag>
+        <Tag href="/">Design system</Tag>
+        <Tag href="/">React</Tag>
         <button {...moreButtonProps}>+12</button>
       </div>
       <button {...editButtonProps.button}>
