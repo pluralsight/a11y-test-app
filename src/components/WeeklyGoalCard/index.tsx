@@ -20,11 +20,11 @@ export default function WeeklyGoalCard() {
       </Flex>
       <span>
         <big>
-          <b>0 min</b>
+          <b>12 min</b>
         </big>{' '}
         / 30 min
       </span>
-      <Progress now={0} />
+      <Progress now={(12 / 30) * 100} />
       <small>Completed this week</small>
     </Card>
   )
