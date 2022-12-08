@@ -5,14 +5,14 @@
 
 .skillLabel {
   display: block;
-  max-width: 15em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .skillContent {
-  flex: 2 1 auto;
+  flex: 1 1 0;
+  min-width: 0;
   padding: 0 0.5rem;
 }
 
