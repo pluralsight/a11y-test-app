@@ -18,14 +18,50 @@ export default function WeeklyGoalCard() {
           Edit goal
         </button>
       </Flex>
+      <GoalDisplay elapsedMinutes={12} goal={1} goalUnits="hours" />
+    </Card>
+  )
+}
+
+interface GoalProps {
+  goal: number
+  elapsedMinutes: number
+  goalUnits: 'min' | 'hours'
+}
+
+function GoalDisplay(props: GoalProps) {
+  function calculateProgressPercent() {
+    const goalMinutes = props.goalUnits === 'min' ? props.goal : props.goal * 60
+    return Math.floor((props.elapsedMinutes / goalMinutes) * 100)
+  }
+
+  return (
+    <div>
       <span>
         <big>
-          <b>12 min</b>
+          <ElapsedTime minutes={props.elapsedMinutes} />
         </big>{' '}
-        / 30 min
+        / {props.goal} {props.goalUnits}
       </span>
-      <Progress now={(12 / 30) * 100} />
+      <Progress now={calculateProgressPercent()} />
       <small>Completed this week</small>
-    </Card>
+    </div>
+  )
+}
+
+interface ElapsedTimeProps {
+  minutes: number
+}
+function ElapsedTime(props: ElapsedTimeProps) {
+  const units = props.minutes >= 60 ? 'hours' : 'min'
+  const displayTime =
+    units === 'hours'
+      ? Math.round((props.minutes / 60) * 100) / 100
+      : props.minutes
+
+  return (
+    <b>
+      {displayTime} {units}
+    </b>
   )
 }
