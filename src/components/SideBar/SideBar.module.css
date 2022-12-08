@@ -34,6 +34,10 @@
   text-decoration: none;
 }
 
+.menuItem > a:hover {
+  text-decoration: underline;
+}
+
 .menuItem > a > svg {
   flex: 0 0 auto;
 }
