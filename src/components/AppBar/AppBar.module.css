@@ -4,7 +4,7 @@
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--ps-text);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   height: 100%;
 }
 
@@ -23,5 +23,8 @@
 
 .wrapper {
   background-color: var(--ps-surface-medium);
+  padding: 0 1rem;
   position: sticky;
+  top: 0;
+  z-index: 1100;
 }
