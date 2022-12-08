@@ -24,6 +24,7 @@ export default function Tooltip(props: TooltipProps) {
     position: props.position,
     disabled: disabled,
   })
+  const { className: triggerClassName, ...triggerProps } = tooltipProps.trigger
 
   const disable = useCallback(() => {
     setDisabled(true)
@@ -47,8 +48,8 @@ export default function Tooltip(props: TooltipProps) {
           const childEl = child as unknown as ReactElement
 
           return cloneElement(childEl, {
-            ...tooltipProps.trigger,
-            className: `${tooltipProps.trigger.className} ${childEl?.props.className}`,
+            ...triggerProps,
+            className: childEl.props.className || triggerClassName,
           })
         })}
 
