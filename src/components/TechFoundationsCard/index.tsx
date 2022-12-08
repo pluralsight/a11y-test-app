@@ -8,6 +8,7 @@ import { PlaceholderIcon, PlayCircleIcon } from '@pluralsight/icons'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
 import Flex from '../Flex'
+import PreloadedImg from '../PreloadImg'
 import Progress from '../Progress'
 import styles from './TechFoundationsCard.module.css'
 
@@ -34,11 +35,12 @@ export default function TechFoundationsCard() {
       <div {...getGridProps({ cols: 2, gap: 16 })}>
         <div {...getGridItemProps({ colSpan: 1 })}>
           <h3>
-            <img
-              height="52"
+            <PreloadedImg
+              width={52}
+              height={52}
               src="https://ps-cdn.s3.us-west-2.amazonaws.com/criterion-ref/imgs/tf_api_economy_10-05-22.svg"
               aria-hidden="true"
-              alt=""
+              alt="API Economy icon"
             />
             &nbsp; API Economy Explained
           </h3>
@@ -63,9 +65,9 @@ export default function TechFoundationsCard() {
                 {...getIconProps({ ariaHidden: true, customSize: '60px' })}
               />
             </span>
-            <img
-              width="500"
-              height="268"
+            <PreloadedImg
+              width={500}
+              height={268}
               alt="API Economy Explained video"
               src="https://source.unsplash.com/random/500x268/?office&q=80"
             />
