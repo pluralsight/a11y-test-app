@@ -15,6 +15,7 @@ export default function VideoLink() {
             alt="video placeholder"
           />
           <Progress
+            label="Platforms Explained video progress"
             kind="inset"
             now={Math.round(Math.random() * 100)}
             size="xs"
