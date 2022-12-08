@@ -137,6 +137,7 @@ function GoalEdit(props: GoalEditProps) {
               {...selectProps.select}
               onChange={handleChange}
               value={value}
+              aria-label="Select a weekly learning goal"
             >
               {goalOptions.optionList.map((optVal) => (
                 <option key={optVal} value={optVal}>
