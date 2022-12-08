@@ -41,7 +41,7 @@ function AvatarLinkEl(props: AvatarLinkProps) {
   })
 
   return (
-    <a {...wrapper} href={props.href}>
+    <a {...wrapper} href={props.href} style={{ verticalAlign: 'middle' }}>
       <MatchAvatarContent {...avatarProps} />
     </a>
   )

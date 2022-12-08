@@ -59,6 +59,7 @@ function AvatarButton(
       onKeyDown={props.onKeyDown}
       onBlur={props.onBlur}
       ref={ref}
+      style={{ verticalAlign: 'middle' }}
     >
       <MatchAvatarContent {...avatarProps} />
     </button>
