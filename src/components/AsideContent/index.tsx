@@ -5,15 +5,18 @@ import InterestCard from '../InterestCard'
 import RoleIqCard from '../RoleIqCard'
 import SkillIqCard from '../SkillIqCard'
 import WeeklyGoalCard from '../WeeklyGoalCard'
+import styles from './AsideContent.module.css'
 
 export default function AsideContent(props: PropsWithChildren) {
   return (
     <div {...getGridItemProps({ colSpan: 3 })}>
-      <RoleIqCard />
-      <WeeklyGoalCard />
-      <BadgeCard />
-      <SkillIqCard />
-      <InterestCard />
+      <div className={styles.asideContent}>
+        <RoleIqCard />
+        <WeeklyGoalCard />
+        <BadgeCard />
+        <SkillIqCard />
+        <InterestCard />
+      </div>
     </div>
   )
 }
