@@ -69,9 +69,9 @@ function Skill(props: SkillProps) {
       <Flex align="center" justify="space-between">
         <span className={styles.skillIcon}>{props.icon}</span>
         <span className={styles.skillContent}>
-          <strong className={styles.skillLabel} title={props.label}>
-            {props.label}
-          </strong>
+          <a href="/" className={styles.skillLabel}>
+            <strong title={props.label}>{props.label}</strong>
+          </a>
           <Badge usage="outline">{props.level}</Badge>
         </span>
         <span className={styles.skillButton}>
