@@ -1,0 +1,13 @@
+.wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
+.footer > p {
+  margin-top: 1rem;
+}
