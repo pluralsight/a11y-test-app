@@ -5,7 +5,6 @@ import {
   getTextLinkProps,
 } from '@pluralsight/headless-styles'
 import { PlaceholderIcon, PlayCircleIcon } from '@pluralsight/icons'
-import { isPropertySignature } from 'typescript'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
 import Flex from '../Flex'
