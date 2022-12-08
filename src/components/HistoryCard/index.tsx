@@ -3,7 +3,7 @@ import Card from '../Card'
 import CardHeader from '../CardHeader'
 import VideoLink from '../VideoLink'
 
-export default function GetStartedCard() {
+export default function HistoryCard() {
   return (
     <Card>
       <CardHeader linkHref="/" linkText="View all" linkIconText="history">
