@@ -18,6 +18,7 @@ import Flex from '../Flex'
 import Notifications from '../Notifications'
 import ProfileMenu from '../ProfileMenu'
 import SearchInput from '../SearchInput'
+import ThemeSwitcher from '../ThemeSwitcher'
 import styles from './AppBar.module.css'
 
 const oneColItem = getGridItemProps({ colSpan: 1 })
@@ -118,10 +119,11 @@ function Shortcuts() {
 
 function Profile() {
   return (
-    <div {...oneColItem}>
+    <div {...getGridItemProps({ colSpan: 1 })}>
       <Flex align="center" justify="space-around">
         <Notifications />
         <AppSwitcher />
+        <ThemeSwitcher />
         <ProfileMenu name="User Name" />
       </Flex>
     </div>
