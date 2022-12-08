@@ -1,0 +1,26 @@
+.startCard {
+  font-size: 0.875rem;
+}
+
+.startCardIcon {
+  flex: 0 0 auto;
+}
+
+.startCardText {
+  flex: 1;
+  padding: 0 0.5em;
+}
+
+.startCardTitle {
+  color: var(--ps-text-strong);
+  display: block;
+}
+
+.startCardDescription {
+  font-size: 0.75rem;
+}
+
+.startCardLink {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
