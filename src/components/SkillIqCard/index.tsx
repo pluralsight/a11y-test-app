@@ -74,7 +74,9 @@ function Skill(props: SkillProps) {
           </strong>
           <Badge usage="outline">{props.level}</Badge>
         </span>
-        <button {...retakeButtonProps}>Retake</button>
+        <span className={styles.skillButton}>
+          <button {...retakeButtonProps}>Retake</button>
+        </span>
       </Flex>
     </div>
   )
