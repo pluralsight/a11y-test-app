@@ -9,3 +9,7 @@
   margin-top: 0.5em;
   text-decoration: none;
 }
+
+.name:hover {
+  text-decoration: underline;
+}
