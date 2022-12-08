@@ -28,7 +28,11 @@ export default function TechFoundationsCard() {
           Tech Foundations
         </CardHeader>
         <div>
-          <Progress now={(3 / 12) * 100} size="xs" />
+          <Progress
+            label="Tech foundations progress"
+            now={(3 / 12) * 100}
+            size="xs"
+          />
           <small>3/12 complete</small>
         </div>
       </Flex>

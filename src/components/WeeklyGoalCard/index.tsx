@@ -67,7 +67,7 @@ function GoalDisplay(props: GoalProps) {
         </big>{' '}
         / <DisplayTime minutes={props.goalMinutes} />
       </span>
-      <Progress now={calculateProgressPercent()} />
+      <Progress label="Weekly goal progress" now={calculateProgressPercent()} />
       <small>Completed this week</small>
     </div>
   )
