@@ -4,6 +4,7 @@ import Badge from '../Badge'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
 import Flex from '../Flex'
+import PreloadedImg from '../PreloadImg'
 import styles from './SkillIqCard.module.css'
 
 const retakeButtonProps = getButtonProps({
@@ -25,7 +26,9 @@ export default function SkillIqCard() {
       </CardHeader>
       <Skill
         icon={
-          <img
+          <PreloadedImg
+            width={50}
+            height={50}
             src="https://pluralsight2.imgix.net/paths/images/react-0f6558f88f.png"
             alt="React icon"
           />
@@ -35,7 +38,9 @@ export default function SkillIqCard() {
       />
       <Skill
         icon={
-          <img
+          <PreloadedImg
+            width={50}
+            height={50}
             src="https://pluralsight2.imgix.net/paths/images/typescript-1169369a3e.png"
             alt="Typescript icon"
           />
@@ -45,7 +50,9 @@ export default function SkillIqCard() {
       />
       <Skill
         icon={
-          <img
+          <PreloadedImg
+            width={50}
+            height={50}
             src="https://pluralsight.imgix.net/paths/path-icons/html5-7ac65c8ec0.png"
             alt="HTML5 icon"
           />

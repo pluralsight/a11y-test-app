@@ -1,6 +1,7 @@
 import Card from '../Card'
 import CardHeader from '../CardHeader'
 import Flex from '../Flex'
+import PreloadedImg from '../PreloadImg'
 import styles from './BadgeCard.module.css'
 
 export default function BadgeCard() {
@@ -30,7 +31,9 @@ function FeaturedBadge() {
   return (
     <a href="/" className={styles.badge}>
       <Flex align="center">
-        <img
+        <PreloadedImg
+          width={115}
+          height={115}
           src="https://source.unsplash.com/random/115x115/?hiking&q=80"
           alt="Weekly Goal 1x Badge"
           className={styles.badgeImage}
@@ -49,7 +52,9 @@ function FeaturedBadge() {
 function Badge() {
   return (
     <a href="/" className={styles.badge}>
-      <img
+      <PreloadedImg
+        width={60}
+        height={60}
         src="https://source.unsplash.com/random/60x60/?space&q=80"
         alt="Stellar Explorer Badge"
         className={styles.badgeImage}

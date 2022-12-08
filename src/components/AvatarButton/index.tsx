@@ -9,6 +9,7 @@ import {
 import { getAvatarProps, getIconProps } from '@pluralsight/headless-styles'
 import { PersonIcon } from '@pluralsight/icons'
 import { type AvatarOptions } from '@pluralsight/headless-styles/types'
+import PreloadedImg from '../PreloadImg'
 
 type AvatarReturn = ReturnType<typeof getAvatarProps>
 
@@ -25,7 +26,7 @@ function MatchAvatarContent(props: Omit<AvatarReturn, 'wrapper'>) {
 type AvatarImgProps = Pick<AvatarReturn['image'], keyof AvatarReturn['image']>
 function AvatarImg(props: AvatarImgProps) {
   // eslint-disable-next-line jsx-a11y/alt-text
-  return <img {...props} />
+  return <PreloadedImg {...props} />
 }
 
 type AvatarLabelProps = Pick<AvatarReturn['label'], keyof AvatarReturn['label']>
