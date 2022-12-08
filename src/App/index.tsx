@@ -3,6 +3,7 @@ import SideBar from '../components/SideBar'
 import MainContent from '../components/MainContent'
 import AsideContent from '../components/AsideContent'
 import { getGridProps } from '@pluralsight/headless-styles'
+import HelpModal from '../components/HelpModal'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <MainContent />
         <AsideContent />
       </div>
+      <HelpModal />
     </div>
   )
 }
