@@ -4,8 +4,10 @@
 }
 
 .skillLabel {
+  color: var(--ps-text);
   display: block;
   overflow: hidden;
+  text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
