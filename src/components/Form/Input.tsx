@@ -24,14 +24,16 @@ interface InputProps extends InputOptions {
 export default function InputField(props: InputProps) {
   const { onChange, kind, ...options } = props
   const { fieldOptions } = getFormControlProps(options)
-  const helpId = props.helpText ? `${props.id}-helpMessage` : ''
+  const helpId = props.helpText ? `${props.id}-helpMessage` : null
   const errorId =
-    fieldOptions.invalid && props.errorMessage ? `${props.id}-errorMessage` : ''
+    fieldOptions.invalid && props.errorMessage
+      ? `${props.id}-errorMessage`
+      : null
   const inputProps = getInputProps({
     kind,
     ...options,
     ...fieldOptions,
-    describedBy: [helpId, errorId].join(','),
+    describedBy: getDescribedBy(helpId, errorId),
   })
   const { value, ...input } = inputProps.input
 
@@ -54,12 +56,12 @@ export default function InputField(props: InputProps) {
       ) : (
         <input {...input} defaultValue={props.defaultValue} />
       )}
-      {props.helpText && !fieldOptions.invalid && (
-        <HelpMessage id={helpId} message={props.helpText} />
+      {helpId && props.helpText && !fieldOptions.invalid && (
+        <HelpMessage id={helpId || ''} message={props.helpText} />
       )}
       {fieldOptions.invalid && props.errorMessage && (
         <ErrorMessage
-          id={errorId}
+          id={errorId || ''}
           invalid={fieldOptions.invalid}
           message={props.errorMessage}
         />
@@ -73,4 +75,17 @@ export default function InputField(props: InputProps) {
       )}
     </div>
   )
+}
+
+function getDescribedBy(helpId: string | null, errorId: string | null) {
+  const describedBy = []
+
+  if (helpId) {
+    describedBy.push(helpId)
+  }
+  if (errorId) {
+    describedBy.push(errorId)
+  }
+
+  return describedBy.join(',')
 }
