@@ -1,7 +1,9 @@
 .wrapper {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
+  background-color: var(--ps-background-strong);
+  bottom: 0;
+  position: sticky;
+  width: 100%;
+  z-index: 100;
 }
 
 .footer {
