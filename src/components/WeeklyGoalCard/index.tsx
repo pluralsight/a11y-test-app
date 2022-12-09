@@ -86,7 +86,8 @@ interface DisplayTimeProps {
 }
 function DisplayTime(props: DisplayTimeProps) {
   const hours = Math.round((props.minutes / 60) * 100) / 100
-  const units = hours >= 1 ? `hour${hours > 1 ? 's' : ''}` : 'min'
+  const s = hours > 1 ? 's' : ''
+  const units = hours >= 1 ? `hour${s}` : 'min'
 
   const displayTime = units === 'min' ? props.minutes : hours
 
