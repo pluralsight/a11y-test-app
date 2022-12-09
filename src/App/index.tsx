@@ -2,6 +2,7 @@ import AppBar from '../components/AppBar'
 import SideBar from '../components/SideBar'
 import MainContentRegion from '../components/MainContentRegion'
 import styles from './App.module.css'
+import Footer from '../components/Footer'
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <div className={styles.main}>
         <MainContentRegion />
       </div>
-      <div className={styles.footer}></div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </article>
   )
 }
