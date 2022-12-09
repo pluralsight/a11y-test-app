@@ -2,6 +2,6 @@
   padding-right: 1rem;
 }
 
-.asideContent > * {
-  margin-top: 1.5rem;
+.asideContent > * + * {
+  margin-top: 2rem;
 }
