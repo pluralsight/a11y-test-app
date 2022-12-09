@@ -46,7 +46,7 @@ function Select(props: SelectProps) {
       <div {...selectProps.selectWrapper}>
         <select {...selectProps.select} onChange={props.onChange}>
           {props.placeholder && (
-            <option hidden disabled selected value="">
+            <option hidden disabled value="">
               {props.placeholder}
             </option>
           )}
