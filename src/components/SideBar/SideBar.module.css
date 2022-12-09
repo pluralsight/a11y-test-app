@@ -1,8 +1,13 @@
 .sidebar {
   background-color: var(--ps-surface-weak);
+  flex: 1 0 auto;
   height: 100vh;
+  left: 0;
   overflow-y: auto;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  width: 15rem;
 }
 
 .menu {

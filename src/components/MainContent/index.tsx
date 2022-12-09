@@ -1,4 +1,3 @@
-import { getGridItemProps } from '@pluralsight/headless-styles'
 import { PropsWithChildren, useState } from 'react'
 import HistoryCard from '../HistoryCard'
 import TechFoundationsCard from '../TechFoundationsCard'
@@ -13,12 +12,10 @@ export default function MainContent(props: PropsWithChildren) {
   }
 
   return (
-    <div {...getGridItemProps({ colSpan: 7 })}>
-      <div className={styles.mainContent}>
-        {showGetStarted && <GetStartedCard handleClose={hideGetStarted} />}
-        <HistoryCard />
-        <TechFoundationsCard />
-      </div>
+    <div className={styles.mainContent}>
+      {showGetStarted && <GetStartedCard handleClose={hideGetStarted} />}
+      <HistoryCard />
+      <TechFoundationsCard />
     </div>
   )
 }
