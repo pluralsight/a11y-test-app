@@ -1,17 +1,22 @@
 import AppBar from '../components/AppBar'
 import SideBar from '../components/SideBar'
-import Flex from '../components/Flex'
 import MainContentRegion from '../components/MainContentRegion'
+import styles from './App.module.css'
 
 function App() {
   return (
-    <div>
-      <AppBar />
-      <Flex>
+    <article className={styles.app}>
+      <div className={styles.header}>
+        <AppBar />
+      </div>
+      <div className={styles.sidebar}>
         <SideBar />
+      </div>
+      <div className={styles.main}>
         <MainContentRegion />
-      </Flex>
-    </div>
+      </div>
+      <div className={styles.footer}></div>
+    </article>
   )
 }
 
