@@ -10,6 +10,7 @@ import Card from '../Card'
 import CardHeader from '../CardHeader'
 import Flex from '../Flex'
 import Progress from '../Progress'
+import styles from './WeeklyGoalCard.module.css'
 
 export default function WeeklyGoalCard() {
   const [editing, setEditing] = useState(false)
@@ -58,17 +59,24 @@ function GoalDisplay(props: GoalProps) {
   }
 
   return (
-    <div>
-      <span>
+    <div className={styles.goalProgress}>
+      <div>
         <big>
           <b>
             <DisplayTime minutes={props.elapsedMinutes} />
           </b>
         </big>{' '}
         / <DisplayTime minutes={props.goalMinutes} />
-      </span>
-      <Progress label="Weekly goal progress" now={calculateProgressPercent()} />
-      <small>Completed this week</small>
+      </div>
+      <div>
+        <Progress
+          label="Weekly goal progress"
+          now={calculateProgressPercent()}
+        />
+      </div>
+      <div>
+        <small>Completed this week</small>
+      </div>
     </div>
   )
 }
