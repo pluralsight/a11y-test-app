@@ -7,7 +7,7 @@ interface RadioProps extends RadioOptions {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export default function BasicRadio(props: RadioProps) {
+export default function Radio(props: RadioProps) {
   const { onChange, direction, ...radioOptions } = props
   const radioProps = getRadioProps(radioOptions)
   const { value, ...labelProps } = getFormLabelProps({
