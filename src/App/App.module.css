@@ -1,0 +1,26 @@
+.app {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+    'header header'
+    'sidebar main'
+    'footer footer';
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+  min-width: 0;
+}
+
+.footer {
+  grid-area: footer;
+}
