@@ -27,7 +27,12 @@ export default function RadioGroup(props: RadioGroupProps) {
   return (
     <div {...control}>
       <div>
-        <label className={labelProps.className}>{props.label}</label>
+        <label
+          className={labelProps.className}
+          style={{ marginBottom: '.5rem' }}
+        >
+          {props.label}
+        </label>
         <Flex
           direction={props.direction === 'col' ? 'column' : 'row'}
           gap="1rem"
