@@ -5,6 +5,7 @@ interface Props {
   align?: string
   direction?: string
   justify?: string
+  gap?: string
 }
 
 export default function Flex(props: PropsWithChildren<Props>) {
@@ -13,7 +14,10 @@ export default function Flex(props: PropsWithChildren<Props>) {
   const justify = props?.justify ?? 'flex-start'
 
   return (
-    <div className={`${styles[align]} ${styles[direction]} ${styles[justify]}`}>
+    <div
+      className={`${styles[align]} ${styles[direction]} ${styles[justify]}`}
+      style={{ gap: props.gap }}
+    >
       {props.children}
     </div>
   )
