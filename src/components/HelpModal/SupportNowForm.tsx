@@ -4,12 +4,14 @@ import InputField from '../Form/Input'
 import Textarea from '../Form/Textarea'
 import styles from './HelpModal.module.css'
 import RadioGroup from '../Form/RadioGroup'
+import CheckboxGroup from '../Form/CheckboxGroup'
 
 export default function SupportNowForm() {
   const [subject, setSubject] = useState('')
   const [details, setDetails] = useState('')
   const [email, setEmail] = useState('')
   const [severity, setSeverity] = useState('')
+  const [products, setProducts] = useState<string[]>([])
 
   function handleSubjectChange(event: ChangeEvent<HTMLInputElement>) {
     setSubject(event.target.value)
@@ -25,6 +27,16 @@ export default function SupportNowForm() {
 
   function handleSeverityChange(event: ChangeEvent<HTMLInputElement>) {
     setSeverity(event.target.value)
+  }
+
+  function handleProductChange(event: ChangeEvent<HTMLInputElement>) {
+    const value = event.target.value
+
+    if (event.target.checked) {
+      setProducts((prev) => [...prev, value])
+    } else {
+      setProducts((prev) => products.filter((product) => product !== value))
+    }
   }
 
   return (
@@ -71,6 +83,21 @@ export default function SupportNowForm() {
             bug: "Something isn't working",
             accessibility: "I can't use something",
             account: 'Account issue',
+          },
+        }}
+      />
+      <CheckboxGroup
+        id="supportProduct"
+        label="Relevant product"
+        name="supportProduct"
+        value={products}
+        onChange={handleProductChange}
+        options={{
+          dataList: ['skills', 'flow', 'cloud'],
+          data: {
+            cloud: 'Cloud skills',
+            flow: 'Flow',
+            skills: 'Skills',
           },
         }}
       />
