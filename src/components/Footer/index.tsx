@@ -1,5 +1,4 @@
 import { PropsWithChildren } from 'react'
-import TextLink from '../TextLink'
 import styles from './Footer.module.css'
 
 export default function Footer() {
