@@ -1,3 +1,5 @@
+import { type PropsWithChildren } from 'react'
+import { Link as RouterLink } from 'react-router-dom'
 import {
   getGridProps,
   getGridItemProps,
@@ -11,7 +13,6 @@ import {
   PathIcon,
   SkillIqIcon,
 } from '@pluralsight/icons'
-import { type PropsWithChildren } from 'react'
 import AppBarIcon from '../AppBarIcon'
 import AppSwitcher from '../AppSwitcher'
 import Flex from '../Flex'
@@ -94,7 +95,7 @@ function Shortcuts() {
     <>
       <div {...getGridItemProps({ colSpan: 3 })}>
         <Flex align="center" justify="space-around">
-          <Link>
+          <Link href="/skilliq">
             <AppBarIcon icon={SkillIqIcon} label="Skill IQ" />
           </Link>
           <Link>
@@ -128,10 +129,10 @@ function Profile() {
   )
 }
 
-function Link(props: PropsWithChildren<{}>) {
+function Link(props: PropsWithChildren<{ href?: string }>) {
   return (
-    <a href="/" className={styles.link}>
+    <RouterLink to={props.href ?? '/'} className={styles.link}>
       {props.children}
-    </a>
+    </RouterLink>
   )
 }
