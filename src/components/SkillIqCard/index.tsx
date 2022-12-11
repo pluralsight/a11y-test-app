@@ -1,18 +1,7 @@
-import { getButtonProps } from '@pluralsight/headless-styles'
-import { ReactNode } from 'react'
-import Badge from '../Badge'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
-import Flex from '../Flex'
 import PreloadedImg from '../PreloadImg'
-import Tooltip from '../Tooltip'
-import styles from './SkillIqCard.module.css'
-
-const retakeButtonProps = getButtonProps({
-  sentiment: 'action',
-  usage: 'filled',
-  size: 'm',
-}).button
+import Skill from '../Skill'
 
 export default function SkillIqCard() {
   return (
@@ -26,6 +15,7 @@ export default function SkillIqCard() {
         Skill IQ
       </CardHeader>
       <Skill
+        buttonLabel="Retake"
         id="react-skill-iq"
         icon={
           <PreloadedImg
@@ -39,6 +29,7 @@ export default function SkillIqCard() {
         level="expert"
       />
       <Skill
+        buttonLabel="Retake"
         id="typescript-skill-iq"
         icon={
           <PreloadedImg
@@ -52,6 +43,7 @@ export default function SkillIqCard() {
         level="Proficient"
       />
       <Skill
+        buttonLabel="Retake"
         id="html5-skill-iq"
         icon={
           <PreloadedImg
@@ -65,40 +57,5 @@ export default function SkillIqCard() {
         level="Expert"
       />
     </Card>
-  )
-}
-
-interface SkillProps {
-  id: string
-  icon: ReactNode
-  label: string
-  level: string
-}
-
-function Skill(props: SkillProps) {
-  return (
-    <div id={props.id} className={styles.skill}>
-      <Flex align="center" justify="space-between">
-        <div className={styles.skillIcon}>{props.icon}</div>
-        <div className={styles.skillContent}>
-          <Tooltip
-            id={`${props.id}-tooltip`}
-            position="top"
-            label={props.label}
-            wrapperStyle={{ maxWidth: '100%' }}
-          >
-            <a href="/" className={styles.skillLabel}>
-              <strong>{props.label}</strong>
-            </a>
-          </Tooltip>
-          <div>
-            <Badge usage="outline">{props.level}</Badge>
-          </div>
-        </div>
-        <div className={styles.skillButton}>
-          <button {...retakeButtonProps}>Retake</button>
-        </div>
-      </Flex>
-    </div>
   )
 }
