@@ -82,7 +82,7 @@ function HomeLinks() {
         <Link>
           <AppBarIcon icon={HomeIcon} label="Home" />
         </Link>
-        <Link>
+        <Link href="/browse">
           <AppBarIcon icon={BrowseIcon} label="Browse" />
         </Link>
       </Flex>
