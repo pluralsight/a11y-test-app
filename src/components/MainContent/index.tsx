@@ -13,6 +13,7 @@ export default function MainContent(props: PropsWithChildren) {
 
   return (
     <div className={styles.mainContent}>
+      <h1 className="psds-screenreader-only">Pluralsight Skills Home</h1>
       {showGetStarted && <GetStartedCard handleClose={hideGetStarted} />}
       <HistoryCard />
       <TechFoundationsCard />
