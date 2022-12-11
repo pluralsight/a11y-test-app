@@ -1,21 +1,24 @@
 import { ImgHTMLAttributes, Suspense } from 'react'
 import { getSkeletonProps } from '@pluralsight/headless-styles'
 import { usePreloadedImg } from '@pluralsight/react-utils'
+import { SkeletonOptions } from '@pluralsight/headless-styles/types'
 
-interface FallbackProps {
+interface FallbackProps extends SkeletonOptions {
   width?: string | number
   height?: string | number
 }
 
 function Fallback(props: FallbackProps) {
+  const width = props.kind === 'circle' ? undefined : 'fit-content'
+
   return (
     <div
       aria-label="Image loading..."
-      {...getSkeletonProps()}
+      {...getSkeletonProps({ kind: props.kind })}
       style={{
         display: 'inline-block',
         verticalAlign: 'middle',
-        width: 'fit-content',
+        width,
       }}
     >
       <div
@@ -44,7 +47,9 @@ function Image(props: ImageProps) {
   return <img {...imgProps} {...img} />
 }
 
-interface PreloadedImgProps extends ImgHTMLAttributes<HTMLImageElement> {}
+interface PreloadedImgProps
+  extends ImgHTMLAttributes<HTMLImageElement>,
+    SkeletonOptions {}
 
 export default function PreloadedImg(props: PreloadedImgProps) {
   const resource = usePreloadedImg({
@@ -55,7 +60,13 @@ export default function PreloadedImg(props: PreloadedImgProps) {
   if (resource) {
     return (
       <Suspense
-        fallback={<Fallback height={props.height} width={props.width} />}
+        fallback={
+          <Fallback
+            height={props.height}
+            width={props.width}
+            kind={props.kind}
+          />
+        }
       >
         <Image {...props} imgData={resource.img} />
       </Suspense>

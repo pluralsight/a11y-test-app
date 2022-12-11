@@ -32,11 +32,12 @@ function FeaturedBadge() {
     <a href="/" className={styles.badge}>
       <Flex align="center">
         <PreloadedImg
-          width={115}
-          height={115}
-          src="https://source.unsplash.com/random/115x115/?hiking&q=80"
           alt="Weekly Goal 1x Badge"
           className={styles.badgeImage}
+          height={115}
+          kind="circle"
+          src="https://source.unsplash.com/random/115x115/?hiking&q=80"
+          width={115}
         />
         <div className={styles.featuredBadgeText}>
           <strong className={styles.featuredBadgeHeading}>
@@ -53,11 +54,12 @@ function Badge() {
   return (
     <a href="/" className={styles.badge}>
       <PreloadedImg
-        width={60}
-        height={60}
-        src="https://source.unsplash.com/random/60x60/?space&q=80"
         alt="Stellar Explorer Badge"
         className={styles.badgeImage}
+        height={60}
+        kind="circle"
+        src="https://source.unsplash.com/random/60x60/?space&q=80"
+        width={60}
       />
       <div className={styles.badgeText}>Stellar Explorer</div>
     </a>
