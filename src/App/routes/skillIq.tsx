@@ -1,6 +1,6 @@
 import { getGridItemProps } from '@pluralsight/headless-styles'
 import Page from '../../components/Page'
-import SkillIqContent from '../../components/SkillIqContent'
+import SkillIqContent from '../../pages/SkillIqContent'
 
 function SkillIq() {
   const mainGridProps = getGridItemProps({ colSpan: 12 })

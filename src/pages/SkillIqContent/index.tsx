@@ -12,7 +12,7 @@ import {
   usePanel,
 } from '@pluralsight/react-utils'
 import { PlaceholderIcon } from '@pluralsight/icons'
-import Skill from '../Skill'
+import Skill from '../../components/Skill'
 import { tabData } from './tabData'
 
 export default function SkillIqContent(props: PropsWithChildren) {

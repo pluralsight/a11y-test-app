@@ -1,7 +1,7 @@
 import { PropsWithChildren, useState } from 'react'
-import HistoryCard from '../HistoryCard'
-import TechFoundationsCard from '../TechFoundationsCard'
-import GetStartedCard from '../GetStartedCard'
+import HistoryCard from '../../components/HistoryCard'
+import TechFoundationsCard from '../../components/TechFoundationsCard'
+import GetStartedCard from '../../components/GetStartedCard'
 import styles from './MainContent.module.css'
 
 export default function MainContent(props: PropsWithChildren) {

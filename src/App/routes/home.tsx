@@ -1,7 +1,7 @@
 import { getGridItemProps } from '@pluralsight/headless-styles'
 import Page from '../../components/Page'
 import AsideContent from '../../components/AsideContent'
-import MainContent from '../../components/MainContent'
+import MainContent from '../../pages/MainContent'
 
 function Home() {
   const mainGridProps = getGridItemProps({ colSpan: 9 })
