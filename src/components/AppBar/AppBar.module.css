@@ -1,16 +1,13 @@
 .logo {
-  display: inline-block;
-  height: 100%;
-  padding: 0.5rem 0;
-  text-decoration: none;
-}
-
-.logoHeading {
   align-items: center;
   color: var(--ps-text-strong);
   display: inline-flex;
   font-size: 1.5rem;
+  font-variation-settings: 'wght' 800;
+  font-weight: 800;
   height: 100%;
+  padding: 0.5rem 0;
+  text-decoration: none;
 }
 
 .logo svg {
