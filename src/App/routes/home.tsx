@@ -1,4 +1,5 @@
 import { getGridItemProps } from '@pluralsight/headless-styles'
+import Page from '../../components/Page'
 import AsideContent from '../../components/AsideContent'
 import MainContent from '../../components/MainContent'
 
@@ -21,14 +22,14 @@ function Home() {
   }
 
   return (
-    <>
+    <Page>
       <div {...mainProps}>
         <MainContent />
       </div>
       <div {...asideProps}>
         <AsideContent />
       </div>
-    </>
+    </Page>
   )
 }
 
