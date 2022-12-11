@@ -1,8 +1,10 @@
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes/routes'
 import AppBar from '../components/AppBar'
 import SideBar from '../components/SideBar'
-import MainContentRegion from '../components/MainContentRegion'
 import styles from './App.module.css'
 import Footer from '../components/Footer'
+import MainContentRegion from '../components/MainContentRegion'
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       <div className={styles.sidebar}>
         <SideBar />
       </div>
-      <div className={styles.main}>
-        <MainContentRegion />
-      </div>
+      <main className={styles.main}>
+        <MainContentRegion>
+          <RouterProvider router={router} />
+        </MainContentRegion>
+      </main>
       <div className={styles.footer}>
         <Footer />
       </div>
