@@ -1,0 +1,83 @@
+.header {
+}
+
+.total {
+  flex: 1 0 auto;
+}
+
+label[for='row-count'],
+label[for='sortBy'] {
+  border: 0;
+  height: 1px;
+  left: -10000px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.results {
+  margin-top: 1rem;
+}
+
+.results > * + * {
+  margin-top: 1rem;
+}
+
+.resultItem {
+  border-top: 1px solid var(--ps-border);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+
+.resultItem:last-child {
+  border-bottom: 1px solid var(--ps-border);
+}
+
+.resultImage {
+  flex: 0 0 112px;
+}
+
+.resultContent {
+  flex: 1 1 auto;
+}
+
+.resultEyebrow > * + * {
+  margin-inline-start: 0.5rem;
+}
+
+.resultTitle {
+  color: var(--ps-text);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.resultByline {
+  font-style: normal;
+}
+
+.resultByline > a {
+  color: var(--ps-text);
+}
+
+.resultFooter > * + * {
+  margin-inline-start: 2rem;
+}
+
+.resultFooter {
+  color: var(--ps-text-weak);
+  margin-top: 2rem;
+}
+
+.resultAdd {
+  flex: 0 0 auto;
+}
+
+.pagination {
+  margin-top: 1rem;
+}
