@@ -13,7 +13,11 @@ interface SwitchProps extends SwitchOptions {
 function Switch(props: SwitchProps) {
   const switchProps = getSwitchProps(props)
   return (
-    <label {...switchProps.switchContainer}>
+    <label
+      {...switchProps.switchContainer}
+      style={{ display: 'flex', alignItems: 'center', gap: '.5em' }}
+    >
+      {props.label}
       <input {...switchProps.input} onClick={props.onClick} />
       <span
         {...(switchProps.switchTrack as DetailedHTMLProps<
