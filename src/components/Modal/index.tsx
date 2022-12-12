@@ -24,6 +24,7 @@ interface ModalProps extends ModalOptions {
   heading: ReactElement | string
   body: ReactElement | string
   onClose: () => void
+  closeRef: RefObject<HTMLButtonElement>
 }
 
 function ModalEl(
@@ -63,7 +64,7 @@ function ModalEl(
           </header>
           <div {...modal.modalBody}>{props.body}</div>
           <footer {...modal.buttonWrapper}>
-            <button {...button} onClick={onClose}>
+            <button {...button} onClick={onClose} ref={props.closeRef}>
               <CloseIcon {...getIconProps(iconOptions as IconOptions)} />
             </button>
           </footer>
