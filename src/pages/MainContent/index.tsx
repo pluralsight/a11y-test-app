@@ -7,20 +7,28 @@ import Admonition from '../../components/Admonition'
 
 export default function MainContent(props: PropsWithChildren) {
   const [showGetStarted, setShowGetStarted] = useState(true)
+  const [showAdmonition, setShowAdmonition] = useState(true)
 
   function hideGetStarted() {
     setShowGetStarted(false)
   }
 
+  function hideAdmonition() {
+    setShowAdmonition(false)
+  }
+
   return (
     <div className={styles.mainContent}>
-      <Admonition
-        title={'Scheduled maintenance'}
-        description={
-          'We are currently undergoing scheduled maintenance. During this time you may experience brief interruptions.  We apologize for any inconvenience.'
-        }
-        showButton={true}
-      />
+      {showAdmonition && (
+        <Admonition
+          title={'Scheduled maintenance'}
+          description={
+            'We are currently undergoing scheduled maintenance. During this time you may experience brief interruptions.  We apologize for any inconvenience.'
+          }
+          showButton={true}
+          onClose={hideAdmonition}
+        />
+      )}
       <h1 className="psds-screenreader-only">Pluralsight Skills Home</h1>
       {showGetStarted && <GetStartedCard handleClose={hideGetStarted} />}
       <HistoryCard />
