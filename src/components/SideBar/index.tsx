@@ -1,4 +1,5 @@
 import { type PropsWithChildren } from 'react'
+import { Link } from 'react-router-dom'
 import { getIconProps } from '@pluralsight/headless-styles'
 import {
   AccountIcon,
@@ -108,7 +109,12 @@ interface MenuItemProps extends PropsWithChildren {
 function MenuItem(props: MenuItemProps) {
   return (
     <li className={styles.menuItem}>
-      <a href={props.href}>{props.children}</a>
+      {props.href ? (
+        <Link to={props.href}>{props.children}</Link>
+      ) : (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+        <a>{props.children}</a>
+      )}
     </li>
   )
 }

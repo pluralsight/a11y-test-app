@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { PropsWithChildren } from 'react'
 import styles from './Footer.module.css'
 
@@ -28,9 +29,9 @@ interface FooterLinkProps extends PropsWithChildren {
 function FooterLink(props: FooterLinkProps) {
   return (
     <li className={styles.footerMenuItem}>
-      <a href={props.href} className={styles.footerLink}>
+      <Link to={props.href} className={styles.footerLink}>
         {props.children}
-      </a>
+      </Link>
     </li>
   )
 }

@@ -1,5 +1,6 @@
-import { getButtonProps } from '@pluralsight/headless-styles'
 import { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+import { getButtonProps } from '@pluralsight/headless-styles'
 import Badge from '../Badge'
 import Flex from '../Flex'
 import Tooltip from '../Tooltip'
@@ -31,9 +32,9 @@ export default function Skill(props: SkillProps) {
             label={props.label}
             wrapperStyle={{ maxWidth: '100%' }}
           >
-            <a href="/" className={styles.skillLabel}>
+            <Link to="/" className={styles.skillLabel}>
               <strong>{props.label}</strong>
-            </a>
+            </Link>
           </Tooltip>
           {props.level && (
             <div>

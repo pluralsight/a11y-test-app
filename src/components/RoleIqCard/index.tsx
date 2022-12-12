@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import AvatarLink from '../AvatarLink'
 import Card from '../Card'
 import Flex from '../Flex'
@@ -14,12 +15,12 @@ export default function RoleIqCard() {
           src="https://source.unsplash.com/random/?face&fit=facearea&facepad=2&w=32&h=32&q=80"
           size="m"
         />
-        <a href="/profile" className={styles.name}>
+        <Link to="/" className={styles.name}>
           User Name
-        </a>
-        <a href="/roleiq" className={styles.link}>
+        </Link>
+        <Link to="/" className={styles.link}>
           What is your Role IQ?
-        </a>
+        </Link>
       </Flex>
     </Card>
   )
