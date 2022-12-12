@@ -79,7 +79,7 @@ function HomeLinks() {
   return (
     <div {...oneColItem}>
       <Flex align="center" justify="space-around">
-        <Link>
+        <Link href="/">
           <AppBarIcon icon={HomeIcon} label="Home" />
         </Link>
         <Link href="/browse">
@@ -131,8 +131,15 @@ function Profile() {
 
 function Link(props: PropsWithChildren<{ href?: string }>) {
   return (
-    <RouterLink to={props.href ?? '/'} className={styles.link}>
-      {props.children}
-    </RouterLink>
+    <>
+      {props.href ? (
+        <RouterLink to={props.href} className={styles.link}>
+          {props.children}
+        </RouterLink>
+      ) : (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+        <a className={styles.link}>{props.children}</a>
+      )}
+    </>
   )
 }
