@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   Children,
   cloneElement,
@@ -62,7 +63,7 @@ function MenuLink(props: MenuItemChildProps) {
 
   return (
     <li {...props.menuListItem}>
-      <a href={props.href} {...props.menuItem} {...rovingTabIndexProps}>
+      <Link to={props.href || '/'} {...props.menuItem} {...rovingTabIndexProps}>
         {Children.map(props.children, (child) => {
           const childEl = child as ReactElement
           if (childEl?.type === 'span') {
@@ -71,7 +72,7 @@ function MenuLink(props: MenuItemChildProps) {
 
           return child
         })}
-      </a>
+      </Link>
     </li>
   )
 }

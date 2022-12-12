@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Flex from '../Flex'
 import PreloadedImg from '../PreloadImg'
 import Progress from '../Progress'
@@ -5,7 +6,7 @@ import styles from './VideoLink.module.css'
 
 export default function VideoLink() {
   return (
-    <a href="/" className={styles.videoLink}>
+    <Link to="/" className={styles.videoLink}>
       <Flex direction="column">
         <div className={styles.videoPreview}>
           <PreloadedImg
@@ -30,6 +31,6 @@ export default function VideoLink() {
         </small>
         <small>40m</small>
       </Flex>
-    </a>
+    </Link>
   )
 }

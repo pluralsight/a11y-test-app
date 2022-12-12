@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Card from '../Card'
 import CardHeader from '../CardHeader'
 import Flex from '../Flex'
@@ -29,7 +30,7 @@ export default function BadgeCard() {
 
 function FeaturedBadge() {
   return (
-    <a href="/" className={styles.badge}>
+    <Link to="/" className={styles.badge}>
       <Flex align="center">
         <PreloadedImg
           alt="Weekly Goal 1x Badge"
@@ -46,13 +47,13 @@ function FeaturedBadge() {
           Set a goal. Get new skills.
         </div>
       </Flex>
-    </a>
+    </Link>
   )
 }
 
 function Badge() {
   return (
-    <a href="/" className={styles.badge}>
+    <Link to="/" className={styles.badge}>
       <PreloadedImg
         alt="Stellar Explorer Badge"
         className={styles.badgeImage}
@@ -62,6 +63,6 @@ function Badge() {
         width={60}
       />
       <div className={styles.badgeText}>Stellar Explorer</div>
-    </a>
+    </Link>
   )
 }

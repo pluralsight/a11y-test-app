@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   getGridItemProps,
   getGridProps,
@@ -103,14 +104,14 @@ function SearchResult() {
           <Badge>Course</Badge>
           <Badge sentiment="action">New</Badge>
         </div>
-        <a href="/" className={styles.resultTitle}>
+        <Link to="/" className={styles.resultTitle}>
           Validating Data Input in Spring 5 Web Applications
-        </a>
+        </Link>
         <address className={styles.resultByline}>
           By{' '}
-          <a href="/" rel="author">
+          <Link to="/" rel="author">
             Bogdan Sucaciu
-          </a>
+          </Link>
         </address>
         <footer className={styles.resultFooter}>
           <small>

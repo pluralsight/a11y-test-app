@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   getGridItemProps,
   getGridProps,
@@ -55,15 +56,15 @@ export default function TechFoundationsCard() {
             automation and artificial intelligence tools to streamline the
             process.
           </p>
-          <a {...playLinkProps.link}>
+          <Link {...playLinkProps.link} to="/">
             <PlayCircleIcon
               {...getIconProps({ ariaHidden: true, size: 's' })}
             />
             Start learning
-          </a>
+          </Link>
         </div>
         <div {...getGridItemProps({ colSpan: 1 })}>
-          <a href="/" className={styles.videoLink}>
+          <Link to="/" className={styles.videoLink}>
             <span className={styles.videoIcon}>
               <PlayCircleIcon
                 {...getIconProps({ ariaHidden: true, customSize: '60px' })}
@@ -75,7 +76,7 @@ export default function TechFoundationsCard() {
               alt="API Economy Explained video"
               src="https://source.unsplash.com/random/500x268/?office&q=80"
             />
-          </a>
+          </Link>
         </div>
       </div>
       <hr className={styles.divider} />
@@ -96,11 +97,11 @@ interface CourseLinkProps {
 
 function CourseLink(props: CourseLinkProps) {
   return (
-    <a href={props.href} className={styles.courseLink}>
+    <Link to={props.href} className={styles.courseLink}>
       <PlaceholderIcon
         {...getIconProps({ customSize: '40px', ariaHidden: true })}
       />
       {props.title}
-    </a>
+    </Link>
   )
 }

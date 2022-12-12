@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { PropsWithChildren, ReactNode } from 'react'
 import { getTagProps } from '@pluralsight/headless-styles'
 import { type TagOptions } from '@pluralsight/headless-styles/types'
@@ -12,8 +13,8 @@ export default function Tag(props: TagProps) {
   const tagProps = getTagProps(tagOptions)
 
   return (
-    <a href={href} {...tagProps.tag}>
+    <Link to={href} {...tagProps.tag}>
       {children}
-    </a>
+    </Link>
   )
 }
