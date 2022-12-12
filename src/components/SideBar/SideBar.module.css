@@ -36,7 +36,7 @@
   text-decoration: none;
 }
 
-.menuItem > a:hover {
+.menuItem > a[href]:hover {
   text-decoration: underline;
 }
 
