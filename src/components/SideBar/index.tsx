@@ -34,27 +34,27 @@ function LeaderTools() {
     <>
       <MenuHeader>Leader Tools</MenuHeader>
       <Menu>
-        <MenuItem href="/">
+        <MenuItem>
           <DashboardIcon {...iconProps} />
           Dashboard
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <AccountIcon {...iconProps} />
           Account
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <OrgChartIcon {...iconProps} />
           People
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <ListBulletsIcon {...iconProps} />
           Priorities
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <ReportIcon {...iconProps} />
           Analytics
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <NotebooksIcon {...iconProps} />
           Log
         </MenuItem>
@@ -68,23 +68,23 @@ function ContentTools() {
     <>
       <MenuHeader>Content Tools</MenuHeader>
       <Menu>
-        <MenuItem href="/">
+        <MenuItem>
           <HomeContentToolsIcon {...iconProps} />
           Home
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <AccountIcon {...iconProps} />
           Content libraries
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <WindowsIcon {...iconProps} />
           Courses
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <TagAssignmentsIcon {...iconProps} />
           Tags & Assignments
         </MenuItem>
-        <MenuItem href="/">
+        <MenuItem>
           <ReportIcon {...iconProps} />
           Library Explorer
         </MenuItem>
@@ -102,7 +102,7 @@ function Menu(props: PropsWithChildren) {
 }
 
 interface MenuItemProps extends PropsWithChildren {
-  href: string
+  href?: string
 }
 
 function MenuItem(props: MenuItemProps) {
