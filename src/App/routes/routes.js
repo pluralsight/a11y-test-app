@@ -8,4 +8,6 @@ import browseRoute from './browse'
 // Config
 const routes = [homeRoute, skillIqRoute, browseRoute]
 
-export const router = createBrowserRouter(routes)
+export const router = createBrowserRouter(routes, {
+  basename: '/a11y-test-app',
+})
