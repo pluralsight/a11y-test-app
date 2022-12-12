@@ -47,7 +47,7 @@ export default function AppBar() {
 function SkillsLogo() {
   return (
     <div {...oneColItem}>
-      <a href="/" className={styles.logo}>
+      <span className={styles.logo}>
         <svg {...iconProps} viewBox="0 0 32 32">
           <defs>
             <linearGradient
@@ -70,7 +70,7 @@ function SkillsLogo() {
           </g>
         </svg>
         <span>Skills</span>
-      </a>
+      </span>
     </div>
   )
 }
