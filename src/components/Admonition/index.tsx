@@ -33,7 +33,8 @@ function matchIconType(sentimentOption?: SentimentType) {
 interface AdmonitionProps extends AdmonitionOptions {
   title: string
   description: string
-  showButton: boolean
+  showButton?: boolean
+  onClose?: () => void
 }
 
 export default function Admonition(props: AdmonitionProps) {
@@ -56,7 +57,7 @@ export default function Admonition(props: AdmonitionProps) {
         <small {...admonition.description}>{props.description}</small>
       </div>
       {props.showButton && (
-        <button {...button}>
+        <button {...button} onClick={props.onClose}>
           <CloseIcon {...getIconProps(iconOptions as IconOptions)} />
         </button>
       )}
