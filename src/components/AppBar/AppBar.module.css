@@ -19,7 +19,7 @@
   text-decoration: none;
 }
 
-.link:hover {
+.link[href]:hover {
   color: var(--ps-action-navigation-hover);
 }
 
