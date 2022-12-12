@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { getIconButtonProps, getIconProps } from '@pluralsight/headless-styles'
+import { getButtonProps, getIconProps } from '@pluralsight/headless-styles'
 import { type IconOptions } from '@pluralsight/headless-styles/types'
 import { HelpCircleIcon } from '@pluralsight/icons'
 import Modal from '../Modal'
@@ -8,9 +8,8 @@ import HelpForm from './HelpForm'
 import styles from './HelpModal.module.css'
 import ConfirmDialog from '../ConfirmDialog'
 
-const iconButtonProps = getIconButtonProps({
-  ariaLabel: 'Help',
-  usage: 'text',
+const iconButtonProps = getButtonProps({
+  usage: 'outline',
 })
 const iconProps = getIconProps(iconButtonProps.iconOptions as IconOptions)
 
@@ -40,7 +39,7 @@ export default function HelpModal() {
   return (
     <div className={styles.wrapper}>
       <button {...iconButtonProps.button} onClick={handleShowModal}>
-        <HelpCircleIcon {...iconProps} />
+        <HelpCircleIcon {...iconProps} /> Contact Support
       </button>
 
       {showModal &&
