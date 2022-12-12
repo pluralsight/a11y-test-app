@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { Link } from 'react-router-dom'
 import { getAvatarProps, getIconProps } from '@pluralsight/headless-styles'
 import { PersonIcon } from '@pluralsight/icons'
 import { type AvatarOptions } from '@pluralsight/headless-styles/types'
@@ -41,9 +42,9 @@ function AvatarLinkEl(props: AvatarLinkProps) {
   })
 
   return (
-    <a {...wrapper} href={props.href} style={{ verticalAlign: 'middle' }}>
+    <Link {...wrapper} to={props.href} style={{ verticalAlign: 'middle' }}>
       <MatchAvatarContent {...avatarProps} />
-    </a>
+    </Link>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   getButtonProps,
   getGridProps,
@@ -74,9 +75,9 @@ function StartButton(props: StartButtonProps) {
             </small>
           </div>
           <span className={styles.startCardLink}>
-            <a {...getTextLinkProps({ href: props.href }).link}>
+            <Link to="/" {...getTextLinkProps({ href: props.href }).link}>
               {props.linkText}
-            </a>
+            </Link>
           </span>
         </Flex>
       </div>

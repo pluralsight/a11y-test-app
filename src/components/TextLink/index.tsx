@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { getTextLinkProps } from '@pluralsight/headless-styles'
 import { type TextLinkOptions } from '@pluralsight/headless-styles/types'
 import { PropsWithChildren } from 'react'
@@ -8,5 +9,9 @@ export default function TextLink(props: TextLinkProps) {
   const { children, ...textLinkOptions } = props
   const textLinkProps = getTextLinkProps(textLinkOptions)
 
-  return <a {...textLinkProps.link}>{children}</a>
+  return (
+    <Link to={props.href} {...textLinkProps.link}>
+      {children}
+    </Link>
+  )
 }
