@@ -17,6 +17,11 @@
 .link {
   color: var(--ps-text);
   text-decoration: none;
+  opacity: 0.5;
+}
+
+.link[href] {
+  opacity: 1;
 }
 
 .link[href]:hover {
